@@ -29,9 +29,9 @@ const DropdownMenu = ({ items,label }) => {
 
   return (
     <div className='w-[355px]'>
-    <p className='text-[#232F43] mb-1 font-bold'>{label}</p>
+    <p className='text-[#232F43] mb-1'>{label}</p>
     <div className="relative">
-      <div className="w-[352px] h-[48px] bg-[#F7F7FA] flex justify-between items-center overflow-hidden border-[#E0DEF7] border rounded-lg ">
+      <div className="w-full h-[48px] bg-[#F7F7FA] flex justify-between items-center overflow-hidden border-[#E0DEF7] border rounded-lg ">
         <button
           onClick={toggleMenu}
           className="w-full text-right px-4 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-700"
@@ -60,7 +60,7 @@ const DropdownMenu = ({ items,label }) => {
       </div>
 
       {isOpen && (
-        <div className="absolute z-10 mt-2 w-[352px] border-[#E0DEF7] border rounded-lg border-gray-100 bg-[#F7F7FA] shadow-lg" role="menu">
+        <div className="absolute z-10 mt-2 w-full border-[#E0DEF7] border rounded-lg border-gray-100 bg-[#F7F7FA] shadow-lg" role="menu">
           <div className="p-2 cursor-pointer">
             {items.map((item, index) => (
               <a

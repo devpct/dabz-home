@@ -15,14 +15,14 @@ export default function AddProperty() {
     <div className="shadow-2xl max-w-[1160px] h-fit text-black bg-white m-auto mt-[6rem] rounded-[16px] lg:px-[1.5rem] px-[1.5rem] pb-[2rem] pt-5">
 
     <div className="text-center">
-    <h2 className='text-[32px] font-extrabold mb-8 text-[#26397F]'>همین حالا ملکتو آگهی کن! :)</h2>
+    <h2 className='text-[32px] font-bold mb-8 text-[#26397F]'>همین حالا ملکتو آگهی کن! :)</h2>
     <p className='text-[#333A54]'>جتاپی ارائه دهنده راهکارهای خرید و پرداخت های بین المللی می باشد. جتاپی در تلاش است</p>
     </div>
 
     <hr className='my-[2rem]'/>
 
     <div className="mb-[2.2rem]">
-    <p className='text-[#232F43] mb-2 font-bold'>عنوان آگهی</p>
+    <p className='text-[#232F43] mb-2'>عنوان آگهی</p>
     <input
     type="text"
     className="py-3 px-4 block w-full border-[#E0DEF7] border rounded-lg bg-[#F7F7FA] text-gray-600 focus:ring-gray-300 focus:outline-none"

@@ -8,6 +8,28 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@font-face {
+  font-family: 'IranYekan';
+  src: url('/fonts/IRANYekanMedium.ttf') format('truetype');
+  font-weight: 500; /* متناظر با وزن متوسط (medium) */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IranYekan';
+  src: url('/fonts/IRANYekanExtraBold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'IranYekan';
+  src: url('/fonts/IRANYekanExtraBlack.ttf') format('truetype');
+  font-weight: 800;
+}
+
+/* اکنون می‌توانید از مقادیر font-weight متناظر استفاده کنید */
+
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -20,7 +42,9 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #FAFAFF;
   direction: rtl;
+  font-family: 'IranYekan';
 }
+
 
 @layer utilities {
   .text-balance {

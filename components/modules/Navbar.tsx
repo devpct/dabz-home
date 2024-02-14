@@ -34,7 +34,7 @@ export default function Navbar() {
   return (
     <>
     <div className="bg-[#26397F] lg:pt-5">
-    <nav ref={navRef} className="bg-[rgb(255,255,255,50%)]  lg:w-[85%]   z-20 mx-auto lg:rounded-[12px] font-extrabold text-[1.1rem]">
+    <nav ref={navRef} className="bg-[rgb(255,255,255,50%)]  lg:w-[85%]   z-20 mx-auto lg:rounded-[12px] font-bold text-[1.1rem]">
     
           <div className="items-center px-4 md:px-8 lg:flex justify-between">
               <div className="flex items-center lg:w-fit w-full justify-between py-3 lg:py-4 lg:block">
