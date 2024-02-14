@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 
 export default function Features() {
     const [features, setFeatures] = useState([
-        { id: 1, imageSrc: "/images/addProperty/parking.png", label: "پارکینگ", isChecked: false },
-        { id: 2, imageSrc: "/images/addProperty/stock.png", label: "انباری", isChecked: false },
-        { id: 3, imageSrc: "/images/addProperty/swimming-pool.png", label: "استخر", isChecked: false },
-        { id: 4, imageSrc: "/images/addProperty/balcony.png", label: "بالکن", isChecked: true },
-        { id: 5, imageSrc: "/images/addProperty/elevator 1.png", label: "آسانسور", isChecked: false },
+        { id: 1, imageSrc: "/images/addProperty/parking.svg", label: "پارکینگ", isChecked: false },
+        { id: 2, imageSrc: "/images/addProperty/stock.svg", label: "انباری", isChecked: false },
+        { id: 3, imageSrc: "/images/addProperty/swimming-pool.svg", label: "استخر", isChecked: false },
+        { id: 4, imageSrc: "/images/addProperty/balcony.svg", label: "بالکن", isChecked: true },
+        { id: 5, imageSrc: "/images/addProperty/elevator.svg", label: "آسانسور", isChecked: false },
       ]);
     
     

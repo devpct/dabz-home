@@ -4,12 +4,12 @@ import React, { useState } from 'react'
 export default function PropertyType() {
 
     const [propertyType, setPropertyType] = useState([
-        { id: 1, imageSrc: "/images/addProperty/apartment.png", label: "مسکونی", isChecked: false },
-        { id: 2, imageSrc: "/images/addProperty/residential.png", label: "تجاری", isChecked: false },
-        { id: 3, imageSrc: "/images/addProperty/office.png", label: "اداری", isChecked: false },
-        { id: 4, imageSrc: "/images/addProperty/modern-house.png", label: "ویلایی", isChecked: false },
-        { id: 5, imageSrc: "/images/addProperty/house.png", label: "کلنگی", isChecked: false },
-        { id: 6, imageSrc: "/images/addProperty/house.png", label: "مستقلات", isChecked: false },
+        { id: 1, imageSrc: "/images/addProperty/apartment.svg", label: "مسکونی", isChecked: false },
+        { id: 2, imageSrc: "/images/addProperty/residential.svg", label: "تجاری", isChecked: false },
+        { id: 3, imageSrc: "/images/addProperty/office.svg", label: "اداری", isChecked: false },
+        { id: 4, imageSrc: "/images/addProperty/modern-house.svg", label: "ویلایی", isChecked: false },
+        { id: 5, imageSrc: "/images/addProperty/house.svg", label: "کلنگی", isChecked: false },
+        { id: 6, imageSrc: "/images/addProperty/house.svg", label: "مستقلات", isChecked: false },
       ]);
       const handlePropertyTypeClick = (id) => {
         setPropertyType(prevPropertyType => 

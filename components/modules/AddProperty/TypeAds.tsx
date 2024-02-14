@@ -4,8 +4,8 @@ import React, { useState } from 'react'
 export default function TypeAds() {
 
     const [typeAds, setTypeAds] = useState([
-        { id: 1, imageSrc: "/images/addProperty/clerk.png", label: "فروش", isChecked: true },
-        { id: 2, imageSrc: "/images/addProperty/tent.png", label: "اجاره", isChecked: false }
+        { id: 1, imageSrc: "/images/addProperty/clerk.svg", label: "فروش", isChecked: true },
+        { id: 2, imageSrc: "/images/addProperty/tent.svg", label: "اجاره", isChecked: false }
       ]);
       const handleTypeAdsClick = (id) => {
         setTypeAds(prevTypeAds => 
