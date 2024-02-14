@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #ededed;
+  direction: rtl;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.sticky-nav {
+  animation: sticky-nav 300ms;
+}
+ 
+@keyframes sticky-nav {
+ 0% {
+     transform: translateY(-6em)
+ }
+
+ 100% {
+     transform: translateY(0)
+ }
+}
+
+.pine-border {
+  position: relative;
+}
+
+.pine-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  right: 0;
+  background-color: #CB9044;
+  border-radius: 0.5rem;
+}
+
+.container-checkbox {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Hide the browser's default checkbox */
+.container-checkbox input {
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 2px solid #E0DEF7;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.container-checkbox input:checked ~ .checkmark {
+  background-color: #CB9044;
+  border: 0px;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 7px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.select-home {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("/images/addProperty/chevron-down.svg");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: calc(0% + 12px) center; 
+}
+
+.filepond--drop-label {
+  color: #4c4e53;
+}
+
+.filepond--label-action {
+  text-decoration-color: #babdc0;
+}
+
+.filepond--panel-root {
+  border-radius: 2em;
+  background-color: #edf0f4;
+  height: 1em;
+}
+
+.filepond--item-panel {
+  background-color: #595e68;
+}
+
+.filepond--drip-blob {
+  background-color: #7f8a9a;
+}
