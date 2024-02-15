@@ -5,7 +5,7 @@ export default function Introduction() {
   return (
     <>
     <div className="lg:px-[5rem] px-[1rem]">
-    <div className="max-w-[1240px] h-fit bg-[#26397F] m-auto mt-[6rem] rounded-[56px] lg:px-[4rem] px-[1.5rem] pb-[3.5rem] pt-5 ">
+    <div className="max-w-[1240px] h-fit bg-[#26397F] m-auto lg:mt-[6rem] rounded-[56px] lg:px-[4rem] px-[1.5rem] pb-[3.5rem] pt-5 ">
     <div className="flex lg:flex-row flex-col gap-x-4 gap-y-4 items-center">
     <Image
         src="/images/introduction/pic.png" 
@@ -13,7 +13,7 @@ export default function Introduction() {
         height={500}
         quality={100}
         alt=""
-        className='w-[25rem] lg:w-[356px] lg:h-[412px] ml-2'    
+        className='w-[18rem] lg:w-[356px] lg:h-[412px] ml-2'    
     />
     <div>
       <h1 className='mb-3 text-[40px] font-extrabold text-[#CB9044]'>دابز هوم</h1>
