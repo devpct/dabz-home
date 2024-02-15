@@ -26,7 +26,7 @@ export default function Features() {
     {features.map(feature => (
       <div 
         key={feature.id}
-        className={`cursor-pointer w-[110px] h-[116px] border-[#E0DEF7] border-[2px] rounded-[16px] text-center relative ${feature.isChecked ? 'bg-[#CB9044] border-0 text-white' : ''} select-none`}
+        className={`cursor-pointer w-[110px] h-[116px] border-[#E0DEF7] border-[2px] rounded-[16px] text-center relative ${feature.isChecked ? 'border-none bg-[#CB9044] text-white' : ''} select-none`}
         onClick={() => handleFeatures(feature.id)}
       >
         <Image

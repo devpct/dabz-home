@@ -4,7 +4,6 @@ import PropertyType from '@/components/modules/AddProperty/PropertyType';
 import QtyRoom from '@/components/modules/AddProperty/QtyRoom';
 import Features from '@/components/modules/AddProperty/Features';
 import UploadImage from '@/components/modules/AddProperty/UploadImage';
-import DropdownMenu from '@/components/modules/DropdownMenu';
 import Input from '@/components/modules/AddProperty/Input';
 import Textarea from '@/components/modules/AddProperty/Textarea';
 
@@ -21,12 +20,14 @@ export default function AddProperty() {
 
     <hr className='my-[2rem]'/>
 
-    <div className="mb-[2.2rem]">
-    <p className='text-[#232F43] mb-2'>عنوان آگهی</p>
-    <input
-    type="text"
-    className="py-3 px-4 block w-full border-[#E0DEF7] border rounded-lg bg-[#F7F7FA] text-gray-600 focus:ring-gray-300 focus:outline-none"
-    />
+    <div className="mb-[2.8rem]">
+    <p className='pine-border pr-2 font-bold'>مشخصات مالک</p>
+    <div className='mt-5 flex flex-wrap xl:justify-normal justify-center gap-5'>
+    
+    <Input label='نام و نام خانوادگی'/>
+    <Input label='شماره تلفن'/>
+
+    </div>
     </div>
 
     <TypeAds/>
@@ -37,9 +38,9 @@ export default function AddProperty() {
     <div className='mt-5 flex flex-wrap xl:justify-normal justify-center gap-5'>
     
     <Input label='متراژ'/>
-    <DropdownMenu label='سال ساخت' items={['۱۴۰۰', '۱۴۰۱', '۱۴۰۲']} />
-    <DropdownMenu label='طبقه' items={['یک', 'دو', 'سوم']} />
-    <DropdownMenu label='واحد' items={['یک', 'دو', 'سوم']} />
+    <Input label='سال ساخت'/>
+    <Input label='طبقه'/>
+    <Input label='واحد'/>
     <Input label='قیمت'/>
 
     </div>

@@ -21,16 +21,16 @@ export default function PropertyType() {
       
   return (
     <>
-        <div className="mb-[4.3rem]">
+    <div className="mb-[4.3rem]">
     <p className='pine-border pr-2 font-bold'>نوع ملک</p>
     <div className='mt-5 flex flex-wrap lg:justify-normal justify-center gap-5'>
     {propertyType.map(property => (
       <div 
         key={property.id}
-        className={`cursor-pointer w-[110px] h-[116px] border-[#E0DEF7] border-[2px] rounded-[16px] text-center relative ${property.isChecked ? 'border-yellow-600' : ''} select-none`}
+        className={`cursor-pointer w-[125px] h-[116px] border-[#E0DEF7] border-[2px] rounded-[16px] text-center relative ${property.isChecked ? 'border-yellow-600' : ''} select-none`}
         onClick={() => handlePropertyTypeClick(property.id)}
       >
-        <div className="absolute right-[1.9rem] top-1">
+        <div className="absolute right-[1.9rem] top-2 ">
           <label className="container-checkbox">
             <input 
               type="checkbox"

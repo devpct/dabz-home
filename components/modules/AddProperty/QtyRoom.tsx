@@ -22,11 +22,11 @@ export default function QtyRoom() {
     <>
     <div className="mb-[5rem]">
     <p>تعداد اتاق</p>
-    <div className='mt-5 flex flex-wrap lg:justify-normal justify-center gap-5'>
+    <div className='mt-5 flex flex-wrap lg:justify-normal justify-center gap-4'>
     {qtyRoom.map(qty => (
       <div 
         key={qty.id}
-        className={`grid cursor-pointer w-[115px] h-[40px] border-[#E0DEF7] border-[2px] rounded-[12px] text-center relative ${qty.isChecked ? 'border-yellow-600' : ''} select-none`}
+        className={`grid cursor-pointer w-fit px-8 h-[40px] border-[#E0DEF7] border-[2px] rounded-[12px] text-center relative ${qty.isChecked ? 'border-yellow-600' : ''} select-none`}
         onClick={() => handleQtyRoomClick(qty.id)}
       >
         <p className='m-auto'>{qty.label}</p>
