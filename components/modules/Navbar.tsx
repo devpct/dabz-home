@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <>
     <div onClick={()=> {state && setState(false)}} className={`z-50 bg-[#26397F] lg:pt-5 ${state && 'w-full fixed bg-[#26397f8e]'}`}>
-    <nav  className={`${state && 'w-[80%] mx-0  bg-[#ffffff]'} bg-[rgb(255,255,255,50%)]  lg:w-[85%]  lg:mx-auto lg:rounded-[12px] font-bold text-[1.1rem]`}>
+    <nav  className={`${state ? 'w-[80%] bg-[#ffffff]': 'bg-[rgb(255,255,255,50%)]  lg:w-[85%]  mx-auto lg:rounded-[12px] '} font-bold text-[1.1rem]`}>
     
           <div className="items-center px-4 md:px-8 lg:flex justify-between">
               <div className="flex items-center lg:w-fit w-full justify-between py-3 lg:py-4 lg:block">
@@ -96,6 +96,3 @@ export default function Navbar() {
     </>
   )
 }
-
-
-
