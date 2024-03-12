@@ -11,8 +11,7 @@
 @font-face {
   font-family: 'IranYekan';
   src: url('/fonts/IRANYekanMedium.ttf') format('truetype');
-  font-weight: 500; /* متناظر با وزن متوسط (medium) */
-  font-style: normal;
+  font-weight: 500;
 }
 
 @font-face {
@@ -146,4 +145,3 @@ body {
   background-repeat: no-repeat;
   background-position: calc(0% + 12px) center; 
 }
-  
