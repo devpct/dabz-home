@@ -20,13 +20,13 @@ export default function Features() {
       };
   return (
     <>
-        <div className="mb-[5rem]">
-    <p className='pine-border pr-2'>امکانات ملک</p>
-    <div className='mt-5 flex flex-wrap lg:justify-normal justify-center gap-5'>
+        <div>
+    <p className='pine-border pr-2 font-bold'>امکانات ملک</p>
+    <div className='mt-5 flex flex-wrap gap-3 sm:gap-5'>
     {features.map(feature => (
       <div 
         key={feature.id}
-        className={`cursor-pointer w-[110px] h-[116px] border-[#E0DEF7] border-[2px] rounded-[16px] text-center relative ${feature.isChecked ? 'border-none bg-[#CB9044] text-white' : ''} select-none`}
+        className={`cursor-pointer sm:w-[110px] w-[90px] h-[100px] sm:h-[116px] border-[#E0DEF7] border-[2px] rounded-[16px] text-center relative ${feature.isChecked ? 'border-none bg-[#CB9044] text-white' : 'text-[#455A64]'} select-none`}
         onClick={() => handleFeatures(feature.id)}
       >
         <Image
@@ -35,9 +35,9 @@ export default function Features() {
           height={48}
           quality={100}
           alt=""
-          className='w-[48px] h-[48px] mx-auto my-4'    
+          className='w-[40px] h-[40px] mx-auto sm:mt-6 mb-2 mt-4'    
         />
-        <p>{feature.label}</p>
+        <p className='sm:text-[16px] text-[13px] '>{feature.label}</p>
       </div>
     ))}
     </div>

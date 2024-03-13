@@ -21,7 +21,7 @@ export default function Navbar() {
                 </Link>
                 <p className='text-[#232F43] '>مراحل فروش خانه</p>
                 </div>
-                <p className='text-[#CB9044] font-bold'>۳۰%</p>
+                <p className='text-[#CB9044] font-bold text-[18px]'>۳۰%</p>
         </nav>
     </>
   )

@@ -1,15 +1,14 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import { useRouter } from 'next/router';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const router = useRouter();
+  const isRootPath = router.pathname === "/"
 
   return (
     <>
-    <div className="lg:pt-[9rem] pt-[3.8rem] relative text-[#232F43]  mt-20 w-full bg-no-repeat bg-cover sm:bg-[url('/images/wave.png')] bg-[url('/images/mask.png')] ">
+        <div className={`relative text-[#232F43]  w-full bg-no-repeat bg-cover ${!isRootPath && "sm:bg-[url('/images/wave.png')]  lg:pt-[9rem] pt-[3.8rem]"} sm:p-0 pt-[3.8rem] lg:bg-none bg-[url('/images/mask.png')]`}>
 
         <div className="px-4 pb-6 pt-16 mx-auto sm:max-w-xl md:max-w-full md:px-24">
       <div className="grid gap-10 row-gap-6 sm:mb-8 sm:grid-cols-2 lg:grid-cols-4">

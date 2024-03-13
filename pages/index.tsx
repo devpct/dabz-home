@@ -10,10 +10,8 @@ export default function index() {
     <Head>
     <title>خانه - دابزهوم</title>
     </Head>
-    
+  
     <Header/>
-    <Introduction/>
-    <AddProperty/>
     </>
   )
 }

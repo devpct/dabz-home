@@ -34,8 +34,8 @@ export default function UploadImage() {
 
   return (
     <>
-      <div className='w-full mb-[4rem]'>
-        <p className='text-[#000000] text-[18px] mb-5 '>تصاویر ملک را بارگذاری کنید</p>
+      <div className='w-full'>
+        <p className='text-[#000000] text-[14px] mb-3 '>تصاویر ملک را بارگذاری کنید</p>
         <DropZone
           style={{border: '2px dashed #26397f80',width: '100%',height: '117px', padding:'0', margin: '0'}}
           acceptedFileTypes={acceptedFileTypes}
@@ -47,14 +47,14 @@ export default function UploadImage() {
           <Flex direction="column" alignItems="center"
           style={{width: '100%',height: '100%'}}
           >
-            <Text style={{marginTop: '18px'}}>فایل را به داخل کادر بکشید</Text>
+            <Text style={{marginTop: '18px', fontSize: '13px', color: '#434C5D'}}>فایل را به داخل کادر بکشید</Text>
             <Button style={{border: '2px solid #434C5D', borderRadius: '6px', width: '86px', height: '36px'}} size="small" onClick={() => hiddenInput.current.click()}>
               <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="0.937023" y="0.75" width="22.5" height="22.5" rx="11.25" stroke="#434C5D" strokeWidth="1.5"/>
                 <path d="M11.9031 16.6733C11.9031 16.954 12.1308 17.1816 12.4114 17.1816C12.692 17.1816 12.9197 16.9543 12.9197 16.6733V7.35827C12.9197 7.07761 12.6921 6.85 12.4114 6.85C12.1307 6.85 11.9031 7.07762 11.9031 7.35827V16.6733Z" fill="#434C5D" stroke="#434C5D" strokeWidth="0.3"/>
                 <path d="M12.4115 8.07848L9.90486 10.5851L9.90476 10.5852L9.7987 10.4791L12.4115 8.07848ZM12.4115 8.07848L14.9182 10.5852C15.0173 10.6843 15.1478 10.734 15.2776 10.734L12.4115 8.07848ZM15.637 10.5852C15.8355 10.3866 15.8355 10.0649 15.637 9.86637L12.7709 7.00026C12.5724 6.80177 12.2504 6.80162 12.052 7.00033L15.637 10.5852ZM15.637 10.5852C15.5376 10.6848 15.407 10.734 15.2776 10.734L15.6372 10.585C15.6371 10.5851 15.6371 10.5851 15.637 10.5852Z" fill="#434C5D" stroke="#434C5D" strokeWidth="0.3"/>
               </svg>
-              <p className='pr-2 text-[#434C5D]'>آپلود</p>
+              <p className='pr-2 text-[#434C5D] text-[14px]'>آپلود</p>
             </Button>
           </Flex>
           <VisuallyHidden
@@ -70,7 +70,7 @@ export default function UploadImage() {
             />
           </VisuallyHidden>
         </DropZone>
-        <div className="flex flex-wrap justify-center sm:justify-normal gap-3">
+        <div className="flex flex-wrap gap-3">
           {[...files].map((file) => (
             <div key={file.name} className="relative mt-5 w-[104px] h-[104px] rounded-[3px] border-double border-[5px]">
               <Image

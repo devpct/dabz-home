@@ -21,13 +21,12 @@ export default function PropertyType() {
       
   return (
     <>
-    <div className="mb-[4.3rem]">
-    <p className='pine-border pr-2 font-bold'>نوع ملک</p>
+    <div className="mb-[4.3rem] m-auto">
     <div className='mt-5 flex flex-wrap lg:justify-normal justify-center gap-5'>
     {propertyType.map(property => (
       <div 
         key={property.id}
-        className={`cursor-pointer w-[125px] h-[116px] border-[#E0DEF7] border-[2px] rounded-[16px] text-center relative ${property.isChecked ? 'border-yellow-600' : ''} select-none`}
+        className={`bg-white cursor-pointer sm:w-[110px] w-[90px] h-[100px] sm:h-[116px] border-[#E0DEF7] border-[2px] rounded-[16px] text-center relative ${property.isChecked ? 'border-yellow-600' : ''} select-none`}
         onClick={() => handlePropertyTypeClick(property.id)}
       >
         <div className="absolute right-[1.9rem] top-2 ">
@@ -46,9 +45,9 @@ export default function PropertyType() {
           height={48}
           quality={100}
           alt=""
-          className='w-[48px] h-[48px] mx-auto my-4'    
+          className='sm:w-[40px] sm:h-[40px] w-[33px] mx-auto sm:mb-4 sm:mt-5 mt-7 mb-2'    
         />
-        <p>{property.label}</p>
+        <p className='sm:text-[16px] text-[13px]'>{property.label}</p>
       </div>
     ))}
     </div>
