@@ -37,7 +37,7 @@ export default function UploadImage() {
       <div className='w-full'>
         <p className='text-[#000000] text-[14px] mb-3 '>تصاویر ملک را بارگذاری کنید</p>
         <DropZone
-          style={{border: '2px dashed #26397f80',width: '100%',height: '117px', padding:'0', margin: '0'}}
+          style={{border: '2px dashed #26397f52',width: '100%',height: '117px', padding:'0', margin: '0'}}
           acceptedFileTypes={acceptedFileTypes}
           onDropComplete={({ acceptedFiles, rejectedFiles }) => {
             const mergedFiles = new Set([...files, ...acceptedFiles]);

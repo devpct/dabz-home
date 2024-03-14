@@ -1,15 +1,54 @@
+import { useRouter } from 'next/router';
 import Link from 'next/link'
+import React, { useState, useEffect } from 'react';
+
 export default function Navbar() {
+  const router = useRouter();
+
+  const handleGoBack = () => {
+    router.back();
+  };
+
+  const progressBar = {
+    '/property-type': 20,
+    '/property-details': 40,
+    '/property-facilities': 60,
+    '/property-description': 80,
+    '/confirm-request': 100,
+  };
+
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const { pathname } = router;
+    setProgress(progressBar[pathname] || 0);
+  }, [router.pathname]);
+
+  const convertToPersian = (num) => {
+    const persianNumbers = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    return String(num)
+      .split('')
+      .map((char) => (/\d/.test(char) ? persianNumbers[parseInt(char, 10)] : char))
+      .join('');
+  };
+
   return (
     <>
         <nav className='w-full flex relative items-center justify-between py-5 px-[1.2rem] sm:px-[5rem] border-b-2'>
-            <div className='w-full h-[8px] absolute bottom-[-5px] right-0'>
-                <div style={{background: 'repeating-linear-gradient(45deg, #E8C597, #E8C597 6px, #CB9044 6px, #CB9044 16px)'}} className='w-[25%] h-full bg-[45px] rounded-l-lg '></div>
-            </div>
+        <div className='w-full h-[8px] absolute bottom-[-5px] right-0'>
+          <div
+            style={{ 
+              background: `repeating-linear-gradient(45deg, #E8C597, #E8C597 6px, #CB9044 6px, #CB9044 16px)`,
+              width: `${progress}%`,
+              transition: 'width 1s'
+             }}
+            className='w-full h-full bg-[45px] rounded-l-lg progress-bar'
+          ></div>
+        </div>
 
-                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M19.2399 7.90674L27.3333 16.0001L19.2399 24.0934" stroke="#434C5D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M4.66669 16H27.1067" stroke="#434C5D" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg className='cursor-pointer' width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={handleGoBack}>
+                <path d="M19.2399 7.90674L27.3333 16.0001L19.2399 24.0934" stroke="#434C5D" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+                <path d="M4.66669 16H27.1067" stroke="#434C5D" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <div className='flex items-center gap-x-3'>
                 <Link href="/">
@@ -21,7 +60,7 @@ export default function Navbar() {
                 </Link>
                 <p className='text-[#232F43] '>مراحل فروش خانه</p>
                 </div>
-                <p className='text-[#CB9044] font-bold text-[18px]'>۳۰%</p>
+                <p className='text-[#CB9044] font-bold text-[18px]'>{`${convertToPersian(progress)}%`}</p>
         </nav>
     </>
   )

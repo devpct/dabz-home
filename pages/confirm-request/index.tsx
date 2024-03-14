@@ -1,6 +1,14 @@
+import Link from 'next/link'
+import Head from 'next/head'
+import Button from '@/components/modules/SalesSteps/Button';
+
 export default function index() {
   return (
     <>
+    <Head>
+    <title>مراحل فروش خانه - دابزهوم</title>
+    </Head>
+    
     <div className='text-[#000929] grid px-4'>
       <div className="sm:mt-[5rem] mt-[3rem] p-[1.8rem] lg:w-[880px] w-full bg-white border border-[#E0DEF7] rounded-[16px] sm:mx-auto grid">
       
@@ -25,7 +33,8 @@ export default function index() {
       <p className='lg:w-[62%] text-center mx-auto mt-5 sm:text-[18px] text-[14px] text-[#232F43]'>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، 
 و با استفاده ازطراحان گرافیک است</p>
       </div>
-      <button className='sm:mt-8 mt-5 sm:mb-0 mb-[3rem] mx-auto w-[250px] h-[48px] bg-[#26397F] text-white rounded-[8px]'>بازگشت به صفحه اول</button>
+
+      <Button title='بازگشت به صفحه اول' route='/'/>
     </div>
     </>
   )

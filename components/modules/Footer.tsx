@@ -8,7 +8,10 @@ export default function Footer() {
 
   return (
     <>
-        <div className={`relative text-[#232F43]  w-full bg-no-repeat bg-cover ${!isRootPath && "sm:bg-[url('/images/wave.png')]  lg:pt-[9rem] pt-[3.8rem]"} sm:p-0 pt-[3.8rem] lg:bg-none bg-[url('/images/mask.png')]`}>
+        <div className={`mt-auto text-[#232F43]  w-full bg-no-repeat bg-cover 
+        ${isRootPath && "lg:bg-none sm:p-0 pt-[3.8rem]"}
+        ${!isRootPath && "lg:pt-[9.1rem] pt-[3.8rem] sm:bg-[url('/images/wave.png')]"}
+         bg-[url('/images/mask.png')]`}>
 
         <div className="px-4 pb-6 pt-16 mx-auto sm:max-w-xl md:max-w-full md:px-24">
       <div className="grid gap-10 row-gap-6 sm:mb-8 sm:grid-cols-2 lg:grid-cols-4">

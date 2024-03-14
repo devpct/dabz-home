@@ -38,12 +38,10 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: white;
   background: #FAFAFF;
   direction: rtl;
   font-family: 'IranYekan';
-  height: 100%;
-  position: relative;
 }
 
 

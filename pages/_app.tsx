@@ -12,9 +12,11 @@ export default function App({ Component, pageProps, router }: AppProps) {
     <link rel="icon" type="image/png" href="icon.png"/>
     <meta name="theme-color" content="#26397F"/>
     </Head>
+    <div className='h-[100vh] grid'>
     {!isHomePage && <Navbar />}   
     <Component {...pageProps} />
     <Footer />
+    </div>
     </>
   )
 }
