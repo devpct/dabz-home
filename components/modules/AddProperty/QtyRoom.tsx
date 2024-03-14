@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 export default function QtyRoom() {
 
     const [qtyRoom, setQtyRoom] = useState([
-        { id: 1, label: "بدون اتاق", isChecked: true },
+        { id: 1, label: "بدون اتاق", isChecked: false },
         { id: 2, label: "۱ اتاق", isChecked: false },
         { id: 3, label: "۲ اتاق", isChecked: false },
         { id: 4, label: "۳ اتاق", isChecked: false },
@@ -11,13 +11,15 @@ export default function QtyRoom() {
         { id: 6, label: "۵ اتاق یا بیشتر", isChecked: false,
         fontSize: '74%'},
       ]);
+      
       const handleQtyRoomClick = (id) => {
         setQtyRoom(prevQtyRoom => 
           prevQtyRoom.map(qty => 
-            qty.id === id ? { ...qty, isChecked: !qty.isChecked } : { ...qty, isChecked: false }
+            qty.id === id ? { ...qty, isChecked: true } : { ...qty, isChecked: false }
           )
         );
-    };
+      };
+      
 
   return (
     <>

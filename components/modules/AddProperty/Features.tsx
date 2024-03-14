@@ -6,18 +6,20 @@ export default function Features() {
         { id: 1, imageSrc: "/images/addProperty/parking.svg", label: "پارکینگ", isChecked: false },
         { id: 2, imageSrc: "/images/addProperty/stock.svg", label: "انباری", isChecked: false },
         { id: 3, imageSrc: "/images/addProperty/swimming-pool.svg", label: "استخر", isChecked: false },
-        { id: 4, imageSrc: "/images/addProperty/balcony.svg", label: "بالکن", isChecked: true },
+        { id: 4, imageSrc: "/images/addProperty/balcony.svg", label: "بالکن", isChecked: false },
         { id: 5, imageSrc: "/images/addProperty/elevator.svg", label: "آسانسور", isChecked: false },
       ]);
     
     
       const handleFeatures = (id) => {
-        setFeatures(prevFeatures => 
-          prevFeatures.map(feature => 
-            feature.id === id ? { ...feature, isChecked: !feature.isChecked } : { ...feature, isChecked: false }
+        setFeatures(prevFeatures =>
+          prevFeatures.map(feature =>
+            feature.id === id ? { ...feature, isChecked: !feature.isChecked } : feature
           )
         );
       };
+      
+
   return (
     <>
         <div>
