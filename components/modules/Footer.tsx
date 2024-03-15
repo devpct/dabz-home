@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import Link from 'next/link';
+import ImportantLinks from '@/components/modules/Footer/ImportantLinks'
 
 export default function Footer() {
   const router = useRouter();
@@ -69,164 +70,9 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className='sm:hidden flex justify-between mb-5'>
-          <div>
-            <p className="text-[18px] font-bold tracking-wide text-[#000929]">
-              لینک های مهم ۱
-            </p>
-            <ul className="mt-8 space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className="transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان یک
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان دو
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان سه
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان شماره چهار
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p className="text-[18px] font-bold tracking-wide text-[#000929]">
-            لینک های مهم ۲
-            </p>
-            <ul className="mt-8 space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className=" transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان یک
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className=" transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان دو
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className=" transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان سه
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className=" transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان شماره چهار
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className='hidden sm:block'>
-            <p className="text-[18px] font-bold tracking-wide text-[#000929]">
-              لینک های مهم ۱
-            </p>
-            <ul className="mt-8 space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className="transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان یک
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان دو
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان سه
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان شماره چهار
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <div className='hidden sm:block'>
-            <p className="text-[18px] font-bold tracking-wide text-[#000929]">
-            لینک های مهم ۲
-            </p>
-            <ul className="mt-8 space-y-3">
-              <li>
-                <Link
-                  href="#"
-                  className=" transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان یک
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className=" transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان دو
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className=" transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان سه
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className=" transition-colors duration-300 hover:text-deep-purple-accent-400"
-                >
-                  عنوان شماره چهار
-                </Link>
-              </li>
-            </ul>
-          </div>
+       
+        <ImportantLinks />
+
         <div className='text-center m-auto'>
           <span className="text-[18px] font-bold tracking-wide text-[#000929]">
             مارا در شبکه های اجتماعی 
