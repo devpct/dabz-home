@@ -25,10 +25,9 @@ export default function PropertyType() {
     <div className="mb-[4.3rem] m-auto">
     <div className='mt-5 flex flex-wrap lg:justify-normal justify-center gap-5'>
     {propertyType.map(property => (
-      <>
+      <div key={property.id}>
       <Link href='/property-details'>
       <div 
-        key={property.id}
         className={`bg-white cursor-pointer sm:w-[110px] w-[90px] h-[100px] sm:h-[116px] border-[#E0DEF7] border-[2px] rounded-[16px] text-center relative ${property.isChecked ? 'border-yellow-600' : ''} select-none`}
         onClick={() => handlePropertyTypeClick(property.id)}
       >
@@ -53,7 +52,7 @@ export default function PropertyType() {
         <p className='sm:text-[16px] text-[13px]'>{property.label}</p>
       </div>
       </Link>
-      </>
+      </div>
     ))}
     </div>
     </div>

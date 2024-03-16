@@ -1,7 +1,16 @@
-import React from 'react'
+import React,{ useEffect } from 'react'
 import Button from '@/components/modules/Home/Button';
+import { useSelector } from 'react-redux';
 
 export default function Header() {
+
+  // log all states
+  const allState = useSelector(state => state);
+
+  useEffect(()=>{
+    console.log(allState)
+  },[allState])
+
   return (
     <>
   <div className="w-full px-[1rem] pt-[2.8rem] lg:pt-[6rem] h-[39rem] lg:h-[56rem] bg-no-repeat bg-cover bg-[100%] text-center flex flex-col gap-y-8

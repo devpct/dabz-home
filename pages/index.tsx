@@ -3,6 +3,7 @@ import Header from '@/components/templates/Home/Header'
 import Head from 'next/head'
 
 export default function index() {
+  
   return (
     <>
     <Head>
