@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import Link from 'next/link';
 import ImportantLinks from '@/components/modules/Footer/ImportantLinks'
 
 export default function Footer() {

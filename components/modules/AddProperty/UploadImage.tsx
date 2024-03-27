@@ -6,7 +6,7 @@ import Image from 'next/image';
 const acceptedFileTypes = ['image/png', 'image/jpeg'];
 
 export default function UploadImage() {
-  const [files, setFiles] = useState(new Set());
+  const [files, setFiles] = useState<Set<File>>(new Set());
   const hiddenInput = useRef(null);
 
   const onFilePickerChange = (event) => {
